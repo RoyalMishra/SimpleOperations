@@ -7,5 +7,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::view('Data','welcome');
+Route::view('usr','welcome');
 Route::get('Op',[DBController::class,'qry']);
+Route::post('Op',[DBController::class,'qry']);
