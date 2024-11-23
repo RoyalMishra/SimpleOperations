@@ -7,6 +7,7 @@
     <div>
         <table border=1>
             <tr>
+                
                 <td>Name</td>
                 <td>Email</td>
                 <td>Password</td>
@@ -21,5 +22,57 @@
                 @endforeach
             
         </table>
+
+        <div>
+            <h2>
+                Actions
+            </h2>
+        </div>
+        <div>
+            <h4><h4><hr style="height:2px;border-width:0;color:gray;background-color:gray;margin-right: 13%;" >
+               ---- Insert User Data -----
+            </h4>
+        </div>
+        <div>
+            <input type="text" name="name" id="name" placeholder="Enter User Name" required>
+            <input type="Email" name="Email" id="Email" placeholder="Enter User Email" required>
+            <input type="password" name="password" id="password" placeholder="Enter User password" required>
+            <button>Insert</button>
+        </div>
+        
+        <div>
+            <h4><h4><hr style="height:2px;border-width:0;color:gray;background-color:gray;margin-right: 13%;" >
+               ---- Update User Data -----
+            </h4>
+        </div>
+        <div>
+            
+            <select name="" id="">
+            @foreach ($data as $d)
+                <option value={{$d->name}}>{{$d->name}}</option>
+                @endforeach
+            </select>
+            <input type="text" name="name" id="name" placeholder="Enter User Name" required>
+            <input type="Email" name="Email" id="Email" placeholder="Enter User Email" required>
+            <input type="password" name="password" id="password" placeholder="Enter User password" required>
+            
+            <button>Update</button>
+            
+        </div>
+        <div>
+            <h4><hr style="height:2px;border-width:0;color:gray;background-color:gray;margin-right: 13%;" >
+               ---- Delete User Data -----
+            </h4>
+        </div>
+        <div>
+            
+            <select name="" id="">
+            @foreach ($data as $d)
+                <option value={{$d->name}}>{{$d->name}}</option>
+                @endforeach
+            </select>
+            <button>Delete</button>
+
+        </div><hr style="height:2px;border-width:0;color:gray;background-color:gray;margin-right: 13%;" >
     </div>
 </x-layout>
